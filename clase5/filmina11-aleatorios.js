@@ -24,7 +24,7 @@ function createList(size) {
 }
 
 const myList = createList(10000);
-console.log(myList);
+console.log('✅ MI LISTA', myList);
 
 /** Crear un objeto cuyas claves sean los números salidos y 
  * el valor asociado a cada clave será la cantidad de veces 
@@ -36,7 +36,7 @@ myList.forEach(function(numero){
   repetidos[numero] = (repetidos[numero] || 0) + 1;
 });
 
-console.log(repetidos);
+console.log('✅ OCURRENCIAS', repetidos);
 
 
 /** Con REDUCE
