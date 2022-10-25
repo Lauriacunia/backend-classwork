@@ -103,5 +103,12 @@ app.delete('/api', (req, res) => {
 
 
 
-app.listen(8000);
-console.log('Server running on port ' + PORT);
+try {
+  app.listen(PORT, () =>
+    console.log(
+      `🚀 Server started on PORT ${PORT} at ${new Date().toLocaleString()}`
+    )
+  );
+} catch (error) {
+  console.log("Error al iniciar servidor", error);
+}
