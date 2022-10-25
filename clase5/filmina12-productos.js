@@ -10,15 +10,18 @@ const productos = [
 /** Obtener A) Los nombres de los productos en un string separados por comas. */
 
 const names = productos.map(producto => producto.nombre);
+console.log('🔸 PRODUCTOS: ');
 console.log(names);
 
 /** Obtener B) El precio total */
 const totalPrice = productos.reduce((total, producto) => total + producto.precio, 0);
+console.log('🔸 PRECIO TOTAL: ');
 console.log(totalPrice);
 
 /** Obtener C) El precio promedio */
 
 const averagePrice = totalPrice / productos.length;
+console.log('🔸 PRECIO PROMEDIO: ');
 console.log(averagePrice);
 
 /** Obtener D) El producto con menor precio */
@@ -28,6 +31,7 @@ const minPrice = productos.reduce((min, producto) => {
     return min;
 }
 , { precio: Infinity });
+console.log('🔸 MENOR PRECIO: ');
 console.log(minPrice);
 
 /** Obtener E) El producto con mayor precio */
@@ -36,6 +40,7 @@ const maxPrice = productos.reduce((max, producto) => {
     return max;
 }
 , { precio: 0});
+console.log('🔸 MAYOR PRECIO: ');
 console.log(maxPrice);
 
 /** Con los datos de los puntos 1 al 5 crear un objeto y representarlo por consola */
@@ -48,4 +53,5 @@ const staticData = {
     maxPriceProduct: maxPrice
 }
 
+console.log('🔸 DATOS ESTATICOS: ');
 console.log(staticData);
